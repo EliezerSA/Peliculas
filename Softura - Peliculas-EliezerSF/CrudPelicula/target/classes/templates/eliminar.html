@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Eliminacion de Peliculas</title>
+</head>
+
+<body>
+
+	<h1>Eliminacion de Peliculas</h1>
+	<br>
+	<a th:href="@{ctrl/pelicula/inicio}"> Regresar</a>
+	<br>
+	<form th:action="@{/ctrl/pelicula/eliminar}" method="POST" th:object="${pelicula}">
+		<label for="id">Id</label>
+		<input type="text" name="id" th:field="*{id}">
+		<br>
+		<label for="id">Pelicula</label>
+		<input type="text" name="pelicula" th:field="*{Pelicula}">
+		<br>
+		<label for="id">Imagen</label>
+		<input type="text" name="imagen" th:field="*{Imagen}">
+		<br>
+		<label for="id">Duracion</label>
+		<input type="text" name="duracion" th:field="*{Duracion}">
+		<br>
+		<label for="id">Clasificacion</label>
+		<input type="text" name="clasificacion" th:field="*{Clasificacion}">
+		<br>
+		
+		<input type="submit" name="eliminar" th:field="Eliminar">
+	</form>
+
+</body>
+
+</html>

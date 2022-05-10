@@ -1,0 +1,13 @@
+Query con Postgre SQL
+
+--Tabla Pelicula
+create table m_pelicula(
+   id serial primary key,
+	pelicula varchar(100) not null,
+	imagen varchar(100) not null,
+	duracion int not null,
+	clasificacion varchar(100)
+	
+);
+
+insert into m_pelicula values ('1','Wolverine','www.wolverine.com','256','adultos')

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Gestion de Peliculas</title>
+</head>
+
+<body>
+
+	<h1>Gestion de Peliculas</h1>
+	<br>
+	<a th:href="@{/ctrl/pelicula/altaPelicula}"> Guardar</a>
+	<br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Pelicula</th>
+				<th>Imagen</th>
+				<th>Duracion</th>
+				<th>Clasificacion</th>
+				<th>Editar</th>
+				<th>Eliminar</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="c:${listaV}">
+				<td th:text="${c.id}">Id</td >
+				<td th:text="${c.pelicula}">Pelicula</td>
+				<td th:text="${c.imagen}">Imagen</td>
+				<td th:text="${c.duracion}">Duracion</td>
+				<td th:text="${c.clasificacion}">Clasificacion</td>
+				<td><a th:href="@{/ctrl/pelicula/abrirEditar/}+${c.id}" th:text="Editar"></a></td>
+				<td><a th:href="@{/ctrl/pelicula/abrirEliminar/}+${c.id}" th:text="Eliminar"></a></td>
+				
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+
+</html>
